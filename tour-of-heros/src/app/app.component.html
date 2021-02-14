@@ -1,0 +1,38 @@
+ 
+
+<!-- <h1>{{ title }} {{ name }}</h1> -->
+
+
+
+
+<!-- <button (click)="send()">Sort </button> 
+
+ <select  (change)="send()" >
+  <option value="1">Asc</option>
+  <option value="2">Dsc</option>
+</select>
+
+
+<ul>
+  <li *ngFor="let fruit of fruits">{{fruit}}
+  </li>
+</ul>-->
+
+  <div *ngFor="let Fan of Fangg">
+  <h2> {{ Fan.name }} </h2>
+
+</div>   
+ <!--<app-heros>
+</app-heros>-->
+ <!--<app-heroes></app-heroes>  replace the <app-heroes> element with a <router-outlet> element.  -->
+     <nav>
+        <a routerLink="/dashboard">Dashboard</a><br>
+        <a routerLink="/heroes">Heroes</a><br>
+        <a routerLink="/fans">Fans</a>
+      </nav>
+<router-outlet></router-outlet>  
+ <!--tells the router where to display routed views-->
+<!--<app-dashboard></app-dashboard>
+  <app-messages></app-messages>  -->
+ <!--<app-fans></app-fans>-->
+ 

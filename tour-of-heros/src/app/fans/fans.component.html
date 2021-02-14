@@ -1,0 +1,34 @@
+ 
+<h2>Fans list</h2>
+
+<!--<p>{{ fansname.id }}  {{fansname.name | uppercase}}</p> to list name which is hard coded in fans.comp.ts
+<div *ngFor="let listfans of fansname">
+    <h2> {{ listfans.name }} </h2> 
+</div>-->
+<!-- to dsplay id on hover 
+  <ul class="heroes"> list values from the mock-fans.ts
+    <li *ngFor="let listfans  of fansname" >
+        <a routerLink="/faninfo/{{listfans.id}}">
+        <span class="badge"> {{ listfans.id }} </span> {{ listfans.name }}
+        </a>
+    </li>
+</ul> -->
+<!-- to display detail of fan wneh fan name is clicked-->
+<ul class="heroes"> 
+    <li *ngFor="let listfans of fansname"  [class.selected]="listfans === selectedFan" (click)="onSelect(listfans)">
+        <span class="badge"> {{ listfans.id }} </span> {{ listfans.name }}
+    </li>
+</ul>
+
+<app-fans-datail [fanz]="selectedFan"></app-fans-datail>
+<!-- <div *ngIf="selectedFan">
+
+    <h2>{{selectedFan.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedFan.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedFan.name" placeholder="name"/>
+      </label>
+    </div>
+  
+  </div> -->
