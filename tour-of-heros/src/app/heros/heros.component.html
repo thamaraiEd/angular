@@ -1,0 +1,48 @@
+
+<!--{{ heroo }}
+{{hero.name}}
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+
+<div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>-->
+<!-- the above the HeroesComponent displays both the list of heroes and the selected hero's details.  
+<h2>My Heroes</h2>
+<ul class="heroes"> 
+  <li *ngFor="let heroee of heroes" [class.selected]="heroee === selectedHero" (click)="onSelect(heroee)">
+    <span class="badge">{{heroee.id}}</span> {{heroee.name}}
+  </li>
+</ul>
+<div *ngIf="selectedHero"> 
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+   <div><span>id: </span>{{selectedHero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+      </label>
+   </div> 
+</div>-->
+<!-- the above the HeroesComponent displays both the list of heroes and the selected hero's details. -->
+<!--<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>--> <!-- displays hero details when hero name is clicked -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
